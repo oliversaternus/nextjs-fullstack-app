@@ -8,11 +8,18 @@ import { EmailService } from '../../../services/EmailService/service';
 const options = {
     providers: [
         EmailProvider({
-            sendVerificationRequest({
+            async sendVerificationRequest({
                 identifier: email,
                 url,
             }) {
-                EmailService.sendEmail('LOGIN', { title: 'Login Link', url }, 'Login Link', email)
+                const result = await EmailService.sendEmail('LOGIN', { url }, 'Anmelden bei buenatoura', email);
+                if (!result) {
+                    throw new Error(`Email to ${email} could not be sent`);
+                }
+                const failed = result.rejected.concat(result.pending).filter(Boolean)
+                if (failed.length) {
+                    throw new Error(`Email(s) (${failed.join(", ")}) could not be sent`)
+                }
             },
         })
     ],

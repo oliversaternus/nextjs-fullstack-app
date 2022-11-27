@@ -4,7 +4,7 @@ export const LOGIN = `<!doctype html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{title}}</title>
+    <title>Anmelden bei buenatoura</title>
     <style>
         @media only screen and (max-width: 620px) {
             table.body h1 {
@@ -89,25 +89,24 @@ export const LOGIN = `<!doctype html>
             }
 
             .btn-primary table td:hover {
-                background-color: #34495e !important;
+                background-color: #374151 !important;
             }
 
             .btn-primary a:hover {
-                background-color: #34495e !important;
-                border-color: #34495e !important;
+                background-color: #374151 !important;
+                border-color: #374151 !important;
             }
         }
     </style>
 </head>
 
 <body
-    style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    style="background-color: #f3f4f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
     <span class="preheader"
-        style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Please
-        verify your account at {{senderUrl}}</span>
+        style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Anmelden bei buenatoura</span>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body"
-        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f6f6f6; width: 100%;"
-        width="100%" bgcolor="#f6f6f6">
+        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f3f4f6; width: 100%;"
+        width="100%" bgcolor="#f3f4f6">
         <tr>
             <td style="font-family: sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
             <td class="container"
@@ -118,7 +117,7 @@ export const LOGIN = `<!doctype html>
 
                     <!-- START CENTERED WHITE CONTAINER -->
                     <table role="presentation" class="main"
-                        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border-radius: 3px; width: 100%;"
+                        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border-radius: 12px; width: 100%;"
                         width="100%">
 
                         <!-- START MAIN CONTENT AREA -->
@@ -133,14 +132,16 @@ export const LOGIN = `<!doctype html>
                                         <td style="font-family: sans-serif; font-size: 16px; vertical-align: top;"
                                             valign="top">
                                             <p
-                                                style="font-family: sans-serif; font-size: 24px; font-weight: bold; margin: 0; margin-bottom: 15px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                Welcome {{user}}!</p>
+                                                style="font-family: sans-serif; font-size: 24px; font-weight: bold; margin: 0; margin-bottom: 15px; color:#111827; font-family: Verdana, sans-serif;">
+                                                Anmelden bei buenatoura</p>
                                             <p
-                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                Thanks for creating an account at {{senderCompanyName}}.</p>
+                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 5px; color:#4b5563; font-family: Verdana, sans-serif;">
+                                                Klicke auf den Button, um automatisch angemeldet zu werden.
+                                            </p>
                                             <p
-                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 20px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                Please verify your account by clicking on this button:</p>
+                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px; color:#4b5563; font-family: Verdana, sans-serif;">
+                                                Dieser Link läuft in 20 Minuten ab.
+                                            </p>
                                             <table role="presentation" border="0" cellpadding="0" cellspacing="0"
                                                 class="btn btn-primary"
                                                 style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%;"
@@ -155,12 +156,13 @@ export const LOGIN = `<!doctype html>
                                                                 style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="font-family: sans-serif; font-size: 16px; vertical-align: top; border-radius: 8px; text-align: center; background-color: #2a3642;"
+                                                                        <td style="font-family: sans-serif; font-size: 16px; vertical-align: top; border-radius: 32px; text-align: center; background-color: #111827;"
                                                                             valign="top" align="center"
-                                                                            bgcolor="#2a3642"> <a href="{{verifyLink}}"
+                                                                            bgcolor="#111827"> <a href="{{url}}"
                                                                                 target="_blank"
-                                                                                style="border: solid 1px #2a3642; border-radius: 8px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 25px; text-decoration: none; text-transform: capitalize; background-color: #2a3642; border-color: #2a3642; color: #ffffff; font-family: Verdana, sans-serif;">Verify
-                                                                                Account</a> </td>
+                                                                                style="border: 1px solid #111827; border-radius: 32px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 25px; text-decoration: none; text-transform: capitalize; background-color: #111827; color: #ffffff; font-family: Verdana, sans-serif;">Jetzt
+                                                                                Anmelden
+                                                                            </a> </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -169,14 +171,11 @@ export const LOGIN = `<!doctype html>
                                                 </tbody>
                                             </table>
                                             <p
-                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-top: 20px; margin-bottom: 15px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                Button doesn't work? Visit this link:</p>
+                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-top: 20px; margin-bottom: 5px; color:#4b5563; font-family: Verdana, sans-serif;">
+                                                Button funktionert nicht? Nutze diesen Link:</p>
                                             <p
-                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                {{verificationLink}}</p>
-                                            <p
-                                                style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; margin-bottom: 15px; color:#2a3642; font-family: Verdana, sans-serif;">
-                                                Have a nice day!</p>
+                                                style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px; color:#4b5563; font-family: Verdana, sans-serif;">
+                                                {{url}}</p>
                                         </td>
                                     </tr>
                                 </table>
@@ -193,19 +192,10 @@ export const LOGIN = `<!doctype html>
                             style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;"
                             width="100%">
                             <tr>
-                                <td class="content-block"
-                                    style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 14px; text-align: center;"
-                                    valign="top" align="center">
-                                    <span class="apple-link"
-                                        style="color: #999999; font-size: 14px; text-align: center; font-family: Verdana, sans-serif;">{{senderCompanyAddress}}</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="content-block powered-by"
-                                    style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 14px; text-align: center; font-family: Verdana, sans-serif;"
+                                    style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #9ca3af; font-size: 14px; text-align: center; font-family: Verdana, sans-serif;"
                                     valign="top" align="center">
-                                    This email was sent automatically. If you didn't register at {{senderUrl}} you can
-                                    simply ignore it.
+                                    Diese Email wurde automatisch versendet.</br> Wenn du dich nicht bei buenatoura.com angemeldet hast, kannst du diese Nachricht ignorieren.
                                 </td>
                             </tr>
                         </table>

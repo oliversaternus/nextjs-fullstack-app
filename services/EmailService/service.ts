@@ -1,6 +1,5 @@
 import handlebars from "handlebars";
 import nodemailer from "nodemailer";
-import { ACCOUNT_VERIFICATION } from "./templates/ACCOUNT_VERIFICATION";
 import { LOGIN } from "./templates/LOGIN";
 import { TemplateKeys, TemplateProps } from "./types";
 
@@ -21,7 +20,6 @@ const mailTransporter = nodemailer.createTransport({
 });
 
 const templates: Partial<{ [key in TemplateKeys]: handlebars.TemplateDelegate<TemplateProps[key]> }> = {
-    ACCOUNT_VERIFICATION: handlebars.compile(ACCOUNT_VERIFICATION),
     LOGIN: handlebars.compile(LOGIN)
 };
 
