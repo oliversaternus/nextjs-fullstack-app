@@ -1,4 +1,4 @@
-<!doctype html>
+export const ACCOUNT_VERIFICATION = `<!doctype html>
 <html>
 
 <head>
@@ -219,4 +219,4 @@
     </table>
 </body>
 
-</html>
+</html>`
