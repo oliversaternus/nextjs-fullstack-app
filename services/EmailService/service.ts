@@ -1,6 +1,6 @@
 import handlebars from "handlebars";
 import nodemailer from "nodemailer";
-import { LOGIN } from "./templates/LOGIN";
+import { LOGIN_HTML, LOGIN_TEXT } from "./templates/LOGIN";
 import { TemplateKeys, TemplateProps } from "./types";
 
 const smtpUser = process.env.SMTP_USER;
@@ -19,21 +19,29 @@ const mailTransporter = nodemailer.createTransport({
     port: Number(smtpPort)
 });
 
-const templates: Partial<{ [key in TemplateKeys]: handlebars.TemplateDelegate<TemplateProps[key]> }> = {
-    LOGIN: handlebars.compile(LOGIN)
+const templates: Partial<{ [key in TemplateKeys]: {
+    html: handlebars.TemplateDelegate<TemplateProps[key]>,
+    text: handlebars.TemplateDelegate<TemplateProps[key]>
+} }> = {
+    LOGIN: {
+        html: handlebars.compile(LOGIN_HTML),
+        text: handlebars.compile(LOGIN_TEXT)
+    }
 };
 
 export const EmailService = {
     sendEmail: async <TemplateKey extends TemplateKeys>(template: TemplateKey, props: TemplateProps[TemplateKey], subject: string, recipient: string) => {
         try {
-            const htmlContent = templates[template]?.(props as any);
-            if (!htmlContent) {
+            const htmlContent = templates[template]?.html?.(props as any);
+            const textContent = templates[template]?.text?.(props as any);
+
+            if (!htmlContent || !textContent) {
                 return;
             }
-            // TODO: Add text content as fallback
             const sentMessageInfo = await mailTransporter.sendMail({
                 from: smtpEmailAddress,
                 html: htmlContent,
+                text: textContent,
                 subject,
                 to: recipient
             });

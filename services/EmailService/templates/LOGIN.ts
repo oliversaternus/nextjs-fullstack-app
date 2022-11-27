@@ -1,4 +1,4 @@
-export const LOGIN = `<!doctype html>
+export const LOGIN_HTML = `<!doctype html>
 <html>
 
 <head>
@@ -209,4 +209,6 @@ export const LOGIN = `<!doctype html>
     </table>
 </body>
 
-</html>`
+</html>`;
+
+export const LOGIN_TEXT = `Anmelden bei buenatoura\n{{url}}\n\n`;
